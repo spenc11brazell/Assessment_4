@@ -16,5 +16,68 @@
             });
       };
     </script>
-  </body>
+
+  <body class="fortune">  
+    <button id="fortuneButton">Get a fortune</button>
+    <script>
+      document.getElementById("fortuneButton").onclick = function () {
+        axios.get("http://localhost:4000/api/fortune/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+    </script>
+  </body> 
+
+  <body class="lucky">
+    <button id="luckyButton">What's your lucky number?</button>
+    <script>
+      document.getElementById("luckyButton").onclick = function () {
+        axios.get("http://localhost:4000/api/lucky/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+    </script>
+
+     <button id="loveButton">What month will you find love?</button>
+     <script>
+       document.getElementById("loveButton").onclick = function () {
+         axios.get("http://localhost:4000/api/love/")
+             .then(function (response) {
+                 const data = response.data;
+                 alert(data);
+               });
+         };
+     </script>
+
+    <button id="vacationButton">Find a vacation spot</button>
+    <script>
+      document.getElementById("vacationButton").onclick = function () {
+       axios.get("http://localhost:4000/api/vacation/")
+            .then(function (response) {
+                const data = response.data;
+                alert(data);
+              });
+        };
+    </script>
+    </body>
+
+<!-- 
+  <body class="love">
+    <button id="loveButton">What month will you find love?</button>
+    <script>
+      document.getElementById("loveButton").onclick = function () {
+        axios.get("http://localhost:4000/api/love/")
+            .then(function (response) {
+                const data = response.data;
+                alert(data);
+              });
+        };
+    </script>
+  </body> -->
+  
+
 </html>
